@@ -1,0 +1,76 @@
+body {
+  background: #121212;
+  color: #e0e0e0;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  color: #0d382a;
+}
+
+.start-screen, .game-screen {
+  max-width: 600px;
+  margin: auto;
+}
+
+label {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #121212;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  margin: 10px;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+label:hover {
+  background-color: #0e4d3a;
+}
+
+.game-step {
+  display: none;
+}
+
+#start:checked ~ .start-screen {
+  display: block;
+}
+
+#start:not(:checked) ~ .start-screen {
+  display: none;
+}
+
+#start:not(:checked) ~ .game-screen {
+  display: block;
+}
+
+#step1:checked ~ .game-screen #step1-content,
+#step2a:checked ~ .game-screen #step2a-content,
+#step2b:checked ~ .game-screen #step2b-content,
+#step3a:checked ~ .game-screen #step3a-content,
+#step3b:checked ~ .game-screen #step3b-content,
+#step4a:checked ~ .game-screen #step4a-content,
+#step4b:checked ~ .game-screen #step4b-content,
+#step5a:checked ~ .game-screen #step5a-content,
+#step5b:checked ~ .game-screen #step5b-content,
+#death:checked ~ .game-screen #death-content {
+  display: block;
+}
+
+.restart {
+  background-color: #ff4444;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.restart:hover {
+  background-color: #cc0000;
+}

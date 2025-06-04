@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Last of Refuge — Jogo Zumbi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- CONTROLES INVISÍVEIS -->
+  <input type="radio" id="start" name="game" checked hidden />
+  <input type="radio" id="step1" name="game" hidden />
+  <input type="radio" id="step2a" name="game" hidden />
+  <input type="radio" id="step2b" name="game" hidden />
+  <input type="radio" id="step3a" name="game" hidden />
+  <input type="radio" id="step3b" name="game" hidden />
+  <input type="radio" id="step4a" name="game" hidden />
+  <input type="radio" id="step4b" name="game" hidden />
+  <input type="radio" id="step5a" name="game" hidden />
+  <input type="radio" id="step5b" name="game" hidden />
+  <input type="radio" id="death" name="game" hidden />
+
+  <!-- TELA INICIAL -->
+  <div class="start-screen">
+    <h1>The Last of Refuge</h1>
+    <label for="step1" role="button">Start</label>
+  </div>
+
+  <!-- TELA DO JOGO -->
+  <div class="game-screen">
+
+    <section id="step1-content" class="game-step">
+      <h2>Você está em um abrigo improvisado, os zumbis estão lá fora.</h2>
+      <p>O que você faz?</p>
+      <label for="step2a">1. Sair para procurar suprimentos</label>
+      <label for="step2b">2. Ficar escondido e esperar amanhecer</label>
+    </section>
+
+    <section id="step2a-content" class="game-step">
+      <h2>Você sai para procurar suprimentos e encontra uma rua cheia de zumbis.</h2>
+      <p>O que você faz?</p>
+      <label for="step3a">1. Tentar passar furtivamente</label>
+      <label for="death">2. Correr direto pelos zumbis</label>
+    </section>
+
+    <section id="step2b-content" class="game-step">
+      <h2>Você espera e amanhece, mas o abrigo foi descoberto.</h2>
+      <p>O que você faz?</p>
+      <label for="death">1. Tentar fugir agora</label>
+      <label for="step3b">2. Se esconder mais fundo no abrigo</label>
+    </section>
+
+    <section id="step3a-content" class="game-step">
+      <h2>Você passa furtivamente e acha um mercado abandonado.</h2>
+      <p>O que você faz?</p>
+      <label for="step4a">1. Entrar no mercado</label>
+      <label for="step4b">2. Seguir direto para o hospital próximo</label>
+    </section>
+
+    <section id="step3b-content" class="game-step">
+      <h2>Você se esconde, mas o abrigo desaba e você fica preso.</h2>
+      <p>O que você faz?</p>
+      <label for="death">1. Gritar por ajuda</label>
+      <label for="step4b">2. Tentar achar outra saída</label>
+    </section>
+
+    <section id="step4a-content" class="game-step">
+      <h2>Dentro do mercado, você encontra comida, mas um zumbi aparece!</h2>
+      <p>O que você faz?</p>
+      <label for="death">1. Lutar contra o zumbi</label>
+      <label for="step5a">2. Fugir do mercado</label>
+    </section>
+
+    <section id="step4b-content" class="game-step">
+      <h2>No hospital, você encontra suprimentos médicos.</h2>
+      <p>O que você faz?</p>
+      <label for="step5a">1. Pegar os suprimentos</label>
+      <label for="death">2. Fugir rápido ao ouvir barulhos</label>
+    </section>
+
+    <section id="step5a-content" class="game-step">
+      <h2>Você consegue suprimentos e se fortalece.</h2>
+      <p>Parabéns, você sobreviveu por enquanto!</p>
+      <label for="start">Jogar de novo</label>
+    </section>
+
+    <section id="step5b-content" class="game-step">
+      <h2>Você foge, mas tropeça e é pego pelos zumbis.</h2>
+      <p>Você morreu.</p>
+      <label for="start" class="restart">Voltar ao início</label>
+    </section>
+
+    <section id="death-content" class="game-step">
+      <h2>Você foi atacado e morreu.</h2>
+      <label for="start" class="restart">Voltar ao início</label>
+    </section>
+
+  </div>
+
+</body>
+</html>
